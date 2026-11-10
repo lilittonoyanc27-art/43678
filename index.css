@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Armenian', system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+/* Subtle pulse for active Rosco letter without expanding outside frame */
+@keyframes rosco-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.7), inset 0 0 6px rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 18px rgba(250, 204, 21, 0.95), inset 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.animate-rosco-current {
+  animation: rosco-pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-pop-in {
+  animation: pop-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

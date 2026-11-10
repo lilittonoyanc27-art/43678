@@ -1,0 +1,6 @@
+{
+  "name": "Pasapalabra Fútbol: Arm-Esp",
+  "description": "27 preguntas sobre fútbol con respuestas de una palabra. Игра Пасапалабра на испано-армянском с таймером на 30 минут.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
